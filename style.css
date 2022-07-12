@@ -72,3 +72,29 @@
 .next {
     margin-top: 640px;
 }
+
+.next::before {
+    transform: translate(-50%) rotate(135deg);
+    border-top: 1px solid white;
+    content: '';
+    border-right: 1px solid white;
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    bottom: 35%;
+    left: 50%;
+}
+
+.prev::after {
+    transform: translate(-50%) rotate(-45deg);
+    content: '';
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    top: 35%;
+    left: 50%;
+}
