@@ -64,6 +64,30 @@ const app = new Vue
 
             },
 
+            created() {
+                setInterval(this.nextSlide, 3000);
+            },
 
-        }
-    )    
+            methods: {
+                nextSlide: function () {
+                    this.index = this.index + 1;
+
+                    if (this.index === this.images.length) {
+
+                        this.index = 0;
+                    };
+                },
+                prevSlide: function () {
+                    this.index = this.index - 1;
+
+                    if (this.index === - 1) {
+
+                        this.index = this.images.length - 1;
+                    };
+                },
+                thumbIsActive: function (index) {
+                    this.index = index;
+                }
+            },
+        },
+    );
